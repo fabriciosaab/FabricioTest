@@ -19,6 +19,11 @@ class Contacts
      */
     protected $name;
 
+    /**
+     * @var string
+     */
+    protected $number;
+
 
     /**
      * @return string
@@ -35,5 +40,22 @@ class Contacts
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    /**
+     * @param string $number
+     * @return void
+     */
+    public function setNumber($number)
+    {
+        $this->number = $number;
     }
 }

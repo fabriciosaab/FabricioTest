@@ -9,6 +9,7 @@
                 <f:for each="{contacts}" as="contacts">
                     <li>
                         <f:link.action action="show" arguments="{contacts: contacts}">{contacts.name}</f:link.action>
+                        <f:link.action action="show" arguments="{contacts: contacts}">{contacts.number}</f:link.action>
                         <f:link.action action="edit" arguments="{contacts: contacts}">Edit</f:link.action>
                         <f:form action="delete" arguments="{contacts: contacts}">
                             <f:form.submit value="Delete" />
