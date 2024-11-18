@@ -1,0 +1,31 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of contacts</f:section>
+
+<f:section name="Content">
+    <f:if condition="{contacts}">
+        <f:then>
+            <ul>
+                <f:for each="{contacts}" as="contacts">
+                    <li>
+                        <div class="contact-info">
+                            <span class="contact-name">{contacts.name}</span>
+                            <span class="contact-phone">{contacts.number}</span>
+                        </div>
+                        <div class="action-buttons">
+                            <f:link.action class="button view-button"  action="show" arguments="{contacts: contacts}"><i class="fas fa-eye"></i> View</f:link.action>
+                            <f:link.action class="button edit-button" action="edit" arguments="{contacts: contacts}"><i class="fas fa-edit"></i> Edit</f:link.action>
+                            <f:form action="delete" arguments="{contacts: contacts}">
+                                <f:form.submit class="delete-button" value="Delete" />
+                            </f:form>
+                        </div>
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <p>No contacts created yet.</p>
+        </f:else>
+    </f:if>
+    <p><f:link.action class="create-button" action="new">Create a new contact</f:link.action></p>
+</f:section>
