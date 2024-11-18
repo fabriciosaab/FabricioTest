@@ -8,12 +8,17 @@
             <ul>
                 <f:for each="{contacts}" as="contacts">
                     <li>
-                        <f:link.action action="show" arguments="{contacts: contacts}">{contacts.name}</f:link.action>
-                        <f:link.action action="show" arguments="{contacts: contacts}">{contacts.number}</f:link.action>
-                        <f:link.action action="edit" arguments="{contacts: contacts}">Edit</f:link.action>
-                        <f:form action="delete" arguments="{contacts: contacts}">
-                            <f:form.submit value="Delete" />
-                        </f:form>
+                        <div class="contact-info">
+                            <span class="contact-name">{contacts.name}</span>
+                            <span class="contact-phone">{contacts.number}</span>
+                        </div>
+                        <div class="action-buttons">
+                            <f:link.action class="button view-button"  action="show" arguments="{contacts: contacts}"><i class="fas fa-eye"></i> View</f:link.action>
+                            <f:link.action class="button edit-button" action="edit" arguments="{contacts: contacts}"><i class="fas fa-edit"></i> Edit</f:link.action>
+                            <f:form action="delete" arguments="{contacts: contacts}">
+                                <f:form.submit class="delete-button" value="Delete" />
+                            </f:form>
+                        </div>
                     </li>
                 </f:for>
             </ul>
@@ -22,5 +27,5 @@
             <p>No contacts created yet.</p>
         </f:else>
     </f:if>
-    <p><f:link.action action="new">Create a new contacts</f:link.action></p>
+    <p><f:link.action class="create-button" action="new">Create a new contact</f:link.action></p>
 </f:section>
