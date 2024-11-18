@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><f:render section="Title" /></title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+                background-color: #f9f9f9;
+            }
+            h1 {
+                color: #5a5a5a;
+                text-align: center;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 20px 0;
+            }
+            li {
+                background: #fff;
+                margin: 10px 0;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .contact-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .contact-name {
+                font-weight: bold;
+                color: #333;
+            }
+            .contact-phone {
+                font-size: 0.9em;
+                color: #666;
+            }
+            .action-buttons {
+                display: flex;
+                align-items: center;
+            }
+            .button {
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                padding: 5px 10px;
+                margin-right: 5px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .view-button {
+                background: #0073e6;
+                color: white;
+            }
+            .edit-button {
+                background: #ffa500;
+                color: white;
+            }
+            .view-button:hover {
+                background: #005bb5;
+            }
+            .edit-button:hover {
+                background: #cc8400;
+            }
+            .delete-button {
+                background: #ff4d4d;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .delete-button:hover {
+                background: #e60000;
+            }
+            .create-button {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 15px;
+                background: #0073e6;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                text-align: center;
+            }
+            .create-button:hover {
+                background: #005bb5;
+            }
+            .button i {
+                margin-right: 5px;
+            }
+        </style>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <f:flashMessages class="flashmessages" />
+
+        <h1><f:render section="Title" /></h1>
+        <f:render section="Content" />
+    </body>
+</html>

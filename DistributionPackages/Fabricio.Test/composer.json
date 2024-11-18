@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "fabricio/test",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fabricio\\Test\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Fabricio.Test"
+        }
+    }
+}
