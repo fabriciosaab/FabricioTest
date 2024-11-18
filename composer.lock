@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0f8a98d9d78620a1e5074c640e001b6",
+    "content-hash": "7a557333a68ded75c19e39034284790c",
     "packages": [
         {
             "name": "brick/math",
@@ -1908,6 +1908,32 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "fabricio/test",
+            "version": "dev-feature/start-development",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Fabricio.Test",
+                "reference": "de751982c0ce78e1462b3c38cefd58ff73809c18"
+            },
+            "require": {
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Fabricio.Test"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fabricio\\Test\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
@@ -7411,10 +7437,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "fabricio/test": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
